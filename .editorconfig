@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+max_line_length = 120
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+indent_size = 2
+
+[*.nix]
+indent_size = 2
+
+[*.{cjs,js,jsx,ts,tsx}]
+indent_size = 2
+max_line_length = 80
+quote_type = single
+trailingComma = all  # wont work
+trailing_comma = all  # wont work

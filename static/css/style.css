@@ -1,0 +1,138 @@
+h1, h2, h3, h4, h5, h6, body {
+  margin: 0;
+}
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #1a1b26;
+  color: #c0caf5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+img {
+  margin: 1vw;
+  max-width: 95vw;
+}
+h1 {
+  font-size: 4rem;
+  color: #7aa2f7;
+}
+a {
+  color: #bb9af7;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+footer {
+  background-color: #111111;
+}
+
+.container {
+  flex: 1;
+  padding: 20px 10px 10px 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+}
+.status {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #9ece6a;
+}
+.reasons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.reasons li {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+#victory-counter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff9e64;
+}
+.label {
+  font-size: 1rem;
+  color: #a9b1d6;
+  text-transform: uppercase;
+}
+.counter-label {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #7aa2f7;
+}
+#counter-item-years        {width: 3ch;}
+#counter-item-days         {width: 3ch;}
+#counter-item-hours        {width: 2ch;}
+#counter-item-minutes      {width: 2ch;}
+#counter-item-seconds      {width: 2ch;}
+#counter-item-milliseconds {width: 3ch;}
+
+.yandex-mirror {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.yandex-mirror img {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.yandex-mirror img:hover {
+  opacity: 1;
+}
+
+.memes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#anime-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10vw;
+  cursor: pointer;
+  transition: opacity 2s ease-out;
+}
+.fading-out {
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-300px * 6 - 2rem * 6)); }
+}
+@keyframes fall {
+  0% { top: -50px; transform: rotate(0deg); }
+  100% { top: 110vh; transform: rotate(360deg); }
+}
+.falling-thing {
+  position: fixed;
+  top: -50px;
+  z-index: 9999;
+  animation: fall 5s linear forwards;
+  pointer-events: none;
+}
