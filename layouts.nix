@@ -72,13 +72,7 @@ in
                       [ ]
                       [
                         "Derived and built with"
-                        (a
-                          [
-                            (attrs.href "https://github.com/arnarg/nixtml")
-                            (mkAttr "style" "display: inline-block;")
-                          ]
-                          [ "nixtml" ]
-                        )
+                        (a [ (attrs.href "https://github.com/arnarg/nixtml") ] [ "nixtml" ])
                         "at"
                         (a [ (attrs.href "https://github.com/barsikus007/nix-victory") ] [ "GitHub" ])
                       ]
