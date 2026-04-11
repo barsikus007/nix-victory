@@ -99,7 +99,12 @@ in
   memes =
     { memesList }:
     [
-      (div [ (attrs.class "memes") ] (map (meme: img [ (attrs.src meme) ]) memesList))
+      (div
+        [ (attrs.class "memes") ]
+        (map (
+          meme: if builtins.isAttrs meme then meme.element else img [ (attrs.src meme) ]
+        ) memesList)
+      )
     ];
   animeButton =
     { }:

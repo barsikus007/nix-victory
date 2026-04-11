@@ -98,7 +98,10 @@ in
               [ "🔈 динамически типизированный 🗃️" ]
               [ "👅 язык программирования 👩‍💻" ]
               [
-                (a [ (attrs.href "https://www.nix.ru") ] [ "💻 Компьютерный Супермаркет 🛒" ])
+                (a
+                  [ (attrs.href "https://www.nix.ru/computer_hardware_news/hardware_news_viewer.html?id=160934") ]
+                  [ "💻 Компьютерный Супермаркет 🛒" ]
+                )
               ]
             ];
           })
@@ -115,6 +118,37 @@ in
               "/images/friend.jpg"
               "/images/path.jpg"
               "/images/chad.jpg"
+              {
+                element =
+                  a
+                    [
+                      (attrs.class "meme-cake")
+                      (attrs.href "https://brand.nixos.org/documents/nixos-branding-guide.pdf#page=26")
+                    ]
+                    [
+                      (p [ ] [ "Do not place the logo on a cake." ])
+                      (div
+                        [ (mkAttr "style" "position: relative; display: inline-block;") ]
+                        [
+                          (img [
+                            (attrs.src "/images/cake.svg")
+                            (mkAttr "style" "height: 300px; display: block;")
+                          ])
+                          (div
+                            [
+                              (mkAttr "style" "position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;")
+                            ]
+                            [
+                              (img [
+                                (attrs.src "/images/nixos-logomark-default-gradient-none.svg")
+                                (mkAttr "style" "height: 20%; transform: scaleY(0.85) translateY(-107%);")
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ];
+              }
             ];
           })
           (div
