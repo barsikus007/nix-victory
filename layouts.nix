@@ -84,91 +84,89 @@ in
           ]
         );
 
-      home =
-        { ... }:
-        [
-          (div [ (attrs.class "status") ] [ "❄️ПРЕДОПРЕДЕЛЕНА❄️" ])
-          (br [ ])
-          (partials.reasons {
-            reasonsList = [
-              [ "❄️ НИКС это ❓" ]
-              [ "🔬 предметно-специфический ✅" ]
-              [ "💦 чисто функциональный λ" ]
-              [ "💤 лениво оцениваемый 💯" ]
-              [ "🔈 динамически типизированный 🗃️" ]
-              [ "👅 язык программирования 👩‍💻" ]
-              [
-                (a
-                  [ (attrs.href "https://www.nix.ru/computer_hardware_news/hardware_news_viewer.html?id=160934") ]
-                  [ "💻 Компьютерный Супермаркет 🛒" ]
-                )
-              ]
-            ];
-          })
-          (partials.counter { })
-          (h3 [ ] [ "NixOS — объявлено размножение отклонений!" ])
-          (partials.memes {
-            memesList = [
-              "/images/nixos_furry.gif"
-              "/images/durka_ebat.gif"
-              "/images/chart.jpg"
-              "/images/nixiki.jpg"
-              "/images/docker.jpg"
-              "/images/zfs-linux-crop.png"
-              "/images/friend.jpg"
-              "/images/path.jpg"
-              "/images/chad.jpg"
-              {
-                #? https://github.com/NixOS/branding/blob/4872f76c52f6c5aec7c234a6ff7dedfbfd0b4fad/package-sets/top-level/nixos-branding/nixos-branding-guide/nixos-branding-guide.typ#L852
-                element =
-                  a
-                    [
-                      (attrs.class "meme-cake")
-                      (attrs.href "https://brand.nixos.org/documents/nixos-branding-guide.pdf#page=26")
-                    ]
-                    [
-                      (p [ ] [ "Do not place the logo on a cake." ])
-                      (div
-                        [ (mkAttr "style" "position: relative; display: inline-block;") ]
-                        [
-                          (img [
-                            (attrs.src "/images/cake.svg")
-                            (mkAttr "style" "height: 300px; display: block;")
-                          ])
-                          (div
-                            [
-                              (mkAttr "style" "position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;")
-                            ]
-                            [
-                              (img [
-                                (attrs.src "/images/nixos-logomark-default-gradient-none.svg")
-                                (mkAttr "style" "height: 20%; transform: scaleY(0.85) translateY(-107%);")
-                              ])
-                            ]
-                          )
-                        ]
-                      )
-                    ];
-              }
-            ];
-          })
-          (div
-            [ (attrs.class "yandex-mirror") ]
+      home = _: [
+        (div [ (attrs.class "status") ] [ "❄️ПРЕДОПРЕДЕЛЕНА❄️" ])
+        (br [ ])
+        (partials.reasons {
+          reasonsList = [
+            [ "❄️ НИКС это ❓" ]
+            [ "🔬 предметно-специфический ✅" ]
+            [ "💦 чисто функциональный λ" ]
+            [ "💤 лениво оцениваемый 💯" ]
+            [ "🔈 динамически типизированный 🗃️" ]
+            [ "👅 язык программирования 👩‍💻" ]
             [
               (a
-                [ (attrs.href "https://mirror.yandex.ru/nixos") ]
-                [
-                  (img [
-                    (attrs.src "https://raw.githubusercontent.com/vasiliyaltunin/ru.mirror.yandex/eeb922eb1966b84f4cde28c09b8a1a7efe4eb35b/src/yandex-logo-mirror.svg")
-                    (attrs.alt "Yandex Mirror")
-                    (mkAttr "style" "height: 150px;")
-                  ])
-                ]
+                [ (attrs.href "https://www.nix.ru/computer_hardware_news/hardware_news_viewer.html?id=160934") ]
+                [ "💻 Компьютерный Супермаркет 🛒" ]
               )
             ]
-          )
-          (partials.animeButton { })
-        ];
+          ];
+        })
+        (partials.counter { })
+        (h3 [ ] [ "NixOS — объявлено размножение отклонений!" ])
+        (partials.memes {
+          memesList = [
+            "/images/nixos_furry.gif"
+            "/images/durka_ebat.gif"
+            "/images/chart.jpg"
+            "/images/nixiki.jpg"
+            "/images/docker.jpg"
+            "/images/zfs-linux-crop.png"
+            "/images/friend.jpg"
+            "/images/path.jpg"
+            "/images/chad.jpg"
+            {
+              #? https://github.com/NixOS/branding/blob/4872f76c52f6c5aec7c234a6ff7dedfbfd0b4fad/package-sets/top-level/nixos-branding/nixos-branding-guide/nixos-branding-guide.typ#L852
+              element =
+                a
+                  [
+                    (attrs.class "meme-cake")
+                    (attrs.href "https://brand.nixos.org/documents/nixos-branding-guide.pdf#page=26")
+                  ]
+                  [
+                    (p [ ] [ "Do not place the logo on a cake." ])
+                    (div
+                      [ (mkAttr "style" "position: relative; display: inline-block;") ]
+                      [
+                        (img [
+                          (attrs.src "/images/cake.svg")
+                          (mkAttr "style" "height: 300px; display: block;")
+                        ])
+                        (div
+                          [
+                            (mkAttr "style" "position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;")
+                          ]
+                          [
+                            (img [
+                              (attrs.src "/images/nixos-logomark-default-gradient-none.svg")
+                              (mkAttr "style" "height: 20%; transform: scaleY(0.85) translateY(-107%);")
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ];
+            }
+          ];
+        })
+        (div
+          [ (attrs.class "yandex-mirror") ]
+          [
+            (a
+              [ (attrs.href "https://mirror.yandex.ru/nixos") ]
+              [
+                (img [
+                  (attrs.src "https://raw.githubusercontent.com/vasiliyaltunin/ru.mirror.yandex/eeb922eb1966b84f4cde28c09b8a1a7efe4eb35b/src/yandex-logo-mirror.svg")
+                  (attrs.alt "Yandex Mirror")
+                  (mkAttr "style" "height: 150px;")
+                ])
+              ]
+            )
+          ]
+        )
+        (partials.animeButton { })
+      ];
 
       page =
         { content, ... }:

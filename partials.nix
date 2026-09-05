@@ -13,7 +13,7 @@ let
 in
 {
   counter =
-    { }:
+    _:
     let
       counterInitial = [
         {
@@ -99,19 +99,14 @@ in
   memes =
     { memesList }:
     [
-      (div
-        [ (attrs.class "memes") ]
-        (map (
-          meme: if builtins.isAttrs meme then meme.element else img [ (attrs.src meme) ]
-        ) memesList)
-      )
+      (div [ (attrs.class "memes") ] (
+        map (meme: if builtins.isAttrs meme then meme.element else img [ (attrs.src meme) ]) memesList
+      ))
     ];
-  animeButton =
-    { }:
-    [
-      (img [
-        (attrs.src "https://noteblock.studio/images/icon.png")
-        (attrs.id "anime-button")
-      ])
-    ];
+  animeButton = _: [
+    (img [
+      (attrs.src "https://noteblock.studio/images/icon.png")
+      (attrs.id "anime-button")
+    ])
+  ];
 }
