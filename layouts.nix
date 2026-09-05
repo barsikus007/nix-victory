@@ -119,6 +119,7 @@ in
               "/images/path.jpg"
               "/images/chad.jpg"
               {
+                #? https://github.com/NixOS/branding/blob/4872f76c52f6c5aec7c234a6ff7dedfbfd0b4fad/package-sets/top-level/nixos-branding/nixos-branding-guide/nixos-branding-guide.typ#L852
                 element =
                   a
                     [

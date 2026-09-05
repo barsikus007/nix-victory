@@ -45,7 +45,8 @@
           ];
         };
 
-        apps = {
+        apps = rec {
+          default = serve;
           serve = {
             type = "app";
             program =
