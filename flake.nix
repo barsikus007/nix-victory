@@ -39,7 +39,10 @@
           content.dir = ./content;
           static.dir = ./static;
 
-          imports = [ ./layouts.nix ];
+          imports = [
+            ./layouts.nix
+            ./static.nix
+          ];
         };
 
         apps = {
