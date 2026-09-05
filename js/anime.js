@@ -50,8 +50,8 @@ function startFallingItems() {
         .toString()
         .padStart(3, "0");
       element = document.createElement("img");
-      element.src = `https://data.chpic.su/stickers/${randomPackName.at(0).toLowerCase()}/${randomPackName}/${randomPackName}_${randomSticker}.webp`;
-      element.alt = `Madoka Sticker ${randomPackName} #${randomSticker}`;
+      element.src = `https://data.chpic.su/stickers/$${randomPackName.at(0).toLowerCase()}/$${randomPackName}/$${randomPackName}_$${randomSticker}.webp`;
+      element.alt = `Madoka Sticker $${randomPackName} #$${randomSticker}`;
     }
 
     element.className = "falling-thing";
