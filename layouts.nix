@@ -109,6 +109,7 @@ in
           memesList = [
             "/images/nixos_furry.gif"
             "/images/durka_ebat.gif"
+            "/images/my-beloved.gif"
             "/images/chart.jpg"
             "/images/nixiki.jpg"
             "/images/docker.jpg"
@@ -116,6 +117,23 @@ in
             "/images/friend.jpg"
             "/images/path.jpg"
             "/images/chad.jpg"
+            "/images/koldun.jpg"
+            "/images/arch-victory.jpg"
+            "/images/chad2.jpg"
+            "/images/stockings.jpg"
+            "/images/penguin-tip.jpg"
+            {
+              element =
+                a
+                  [
+                    (attrs.href "https://github.com/NixOS/moderation/commit/e9d67b7efa03e6e9bc0bf2d03c6344d60c103395#commitcomment-132678029")
+                  ]
+                  [
+                    (img [
+                      (attrs.src "/images/vegan.jpg")
+                    ])
+                  ];
+            }
             {
               #? https://github.com/NixOS/branding/blob/4872f76c52f6c5aec7c234a6ff7dedfbfd0b4fad/package-sets/top-level/nixos-branding/nixos-branding-guide/nixos-branding-guide.typ#L852
               element =
