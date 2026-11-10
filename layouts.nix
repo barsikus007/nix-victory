@@ -121,7 +121,19 @@ in
             "/images/arch-victory.jpg"
             "/images/chad2.jpg"
             "/images/stockings.jpg"
+            "/images/stockings-truth.png"
             "/images/penguin-tip.jpg"
+            "/images/safety.png"
+            "/images/wojak.png"
+            "/images/nixmaxxer.png"
+            {
+              element = a [ (attrs.href "https://nixos.com") ] [
+                (img [
+                  (attrs.src "/images/visit-nixos-com.png")
+                  (attrs.alt "nixos.com is a porn site #179")
+                ])
+              ];
+            }
             {
               element =
                 a
