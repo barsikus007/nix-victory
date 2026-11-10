@@ -163,7 +163,7 @@
       const madokaStickerPacks = {
         Madoka_Magica: 101,
         HomuraPack: 107,
-        nekostickerpack218: 41,
+        nekostickerpack218: 40,
       };
       const madokaStickerPacksKeys = Object.keys(madokaStickerPacks);
       function startFallingItems() {
@@ -189,13 +189,13 @@
                 Math.floor(Math.random() * madokaStickerPacksKeys.length)
               ];
             const randomSticker = (
-              Math.floor(Math.random() * (madokaStickerPacks[randomPackName] - 1)) + 1
+              Math.floor(Math.random() * madokaStickerPacks[randomPackName]) + 1
             )
               .toString()
               .padStart(3, "0");
             element = document.createElement("img");
-            element.src = `https://data.chpic.su/stickers/$${randomPackName.at(0).toLowerCase()}/$${randomPackName}/$${randomPackName}_$${randomSticker}.webp`;
-            element.alt = `Madoka Sticker $${randomPackName} #$${randomSticker}`;
+            element.src = `https://data.chpic.su/stickers/''${randomPackName.at(0).toLowerCase()}/''${randomPackName}/''${randomPackName}_''${randomSticker}.webp`;
+            element.alt = `Madoka Sticker ''${randomPackName} #''${randomSticker}`;
           }
 
           element.className = "falling-thing";
